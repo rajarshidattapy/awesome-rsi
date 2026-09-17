@@ -1,8 +1,14 @@
-# Contributing to Awesome RSI
+# Contributing to AgentR Awesome RSI
 
-Thank you for helping keep this a precise, high-signal map of recursive self-improvement.
+This index is an [AgentR](https://agentr.dev) research initiative. Keep it precise, high-signal, and consistent with AgentR’s research voice: clean, technical, and evidence-first.
 
-This list is maintained by editing `README.md` directly. Prefer primary sources, official implementations, and reproducible artifacts.
+The list is maintained by editing `README.md` directly. Prefer primary sources, official implementations, and reproducible artifacts.
+
+Star badges use AgentR orange (`#e75b31`). Do not introduce new badge colors.
+
+## Voice
+
+Write like the rest of [agentr.dev](https://agentr.dev): short, technical, and specific. Name what persists, what the evidence is, and where the claim stops. Avoid marketing adjectives and unverified performance claims.
 
 ## Inclusion criteria
 
@@ -58,7 +64,7 @@ When uncertain, use the weaker label and state the limitation. Classification is
 ### Papers
 
 ```markdown
-| **[Short Name](https://arxiv.org/abs/....)**<br>YYYY-MM-DD | **Self-modification**<br>What changes, how it is evaluated, and what is reused later.<br><details open><summary>Boundary</summary>The strongest honest limit.</details> | [Official&nbsp;code](https://github.com/org/repo)<br>[![star](https://img.shields.io/github/stars/org/repo?style=flat-square&label=star&color=f4b400)](https://github.com/org/repo) |
+| **[Short Name](https://arxiv.org/abs/....)**<br>YYYY-MM-DD | **Self-modification**<br>What changes, how it is evaluated, and what is reused later.<br><details open><summary>Boundary</summary>The strongest honest limit.</details> | [Official&nbsp;code](https://github.com/org/repo)<br>[![star](https://img.shields.io/github/stars/org/repo?style=flat-square&label=star&color=e75b31)](https://github.com/org/repo) |
 ```
 
 Use **Papers / Harness** for self-reference, **Papers / Models** for iterative weight learning, **Papers / Experience** for persistent memory and skills, and **Papers / Theory and Evaluation** for measurement or formal work.
@@ -76,7 +82,7 @@ Put first-party mechanism results in **Mechanisms and Results**. Supporting meth
 ### GitHub projects
 
 ```markdown
-| Project | [GitHub](https://github.com/org/repo) | [![star](https://img.shields.io/github/stars/org/repo?style=flat-square&label=star&color=f4b400)](https://github.com/org/repo) | `tag-one`<br>`tag-two` | **Self-modification**<br>What the implementation does.<br><details open><summary>Boundary</summary>Limit.</details> |
+| Project | [GitHub](https://github.com/org/repo) | [![star](https://img.shields.io/github/stars/org/repo?style=flat-square&label=star&color=e75b31)](https://github.com/org/repo) | `tag-one`<br>`tag-two` | **Self-modification**<br>What the implementation does.<br><details open><summary>Boundary</summary>Limit.</details> |
 ```
 
 A self-evolving name is not evidence. Record what changes, the feedback, the retained state, and the limitation.

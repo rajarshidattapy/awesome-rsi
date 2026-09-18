@@ -6,6 +6,6 @@ def paper(title, url, org, date, source, tags, abstract):
     return (
         f"### [{title}]({url}) — {org}\n"
         f"*{date} · {source}*\n\n"
-        f"tags: {tag_line}\n\n"
+        f"{tag_line}\n\n"
         f"> **Abstract:** {abstract}\n"
     )

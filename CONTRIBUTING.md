@@ -14,7 +14,7 @@ Out of scope: one-shot answer revision, generic agent frameworks, marketing post
 ### [Article Title](https://arxiv.org/abs/....) — Organization
 *YYYY-MM-DD · Source Type*
 
-tags: `Self-Evolving Agents` `Self-Modification`
+`Self-Evolving Agents` `Self-Modification`
 
 > **Abstract:** Problem or context, method or system, and main reported result. Factual, technical, concise. No opinions, “why it matters,” or marketing language.
 ```

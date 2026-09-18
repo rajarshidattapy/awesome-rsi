@@ -13,7 +13,6 @@ CREAM = (243, 238, 223)
 ORANGE = (231, 91, 49)
 ACID = (213, 223, 114)
 GOLD = (239, 166, 76)
-MUTED = (243, 238, 223, 150)
 LINE = (255, 255, 255, 26)
 
 W, H = 1800, 540
@@ -50,44 +49,40 @@ def main() -> None:
     draw = ImageDraw.Draw(img)
     draw.rectangle((0, 0, W - 1, H - 1), outline=LINE, width=1)
 
-    mark = Image.open(ASSETS / "agentr-mark.png").convert("RGBA")
-    mark.thumbnail((128, 128), Image.Resampling.LANCZOS)
-    mark_x, mark_y = 64, 62
-    img.paste(mark, (mark_x, mark_y), mark)
-
-    mono = load("JetBrainsMono-Medium.ttf", 16)
-    hanken = load("HankenGrotesk-Bold.ttf", 40)
+    mono = load("JetBrainsMono-Medium.ttf", 22)
     serif = load("Newsreader-Regular.ttf", 86)
     italic = load("Newsreader-Italic.ttf", 28)
-    loop = load("JetBrainsMono-Medium.ttf", 17)
+    credit_sans = load("HankenGrotesk-Bold.ttf", 30)
+    credit_size = 30
 
-    left = mark_x + mark.width + 28
-    draw_text(draw, (left, 78), "A RESEARCH INITIATIVE", mono, ACID, tracking=3.4)
-    draw_text(draw, (left, 112), "agentr", hanken, CREAM, tracking=-2.0)
-    agentr_w = sum(draw.textlength(c, font=hanken) - 2.0 for c in "agentr") + 2.0
-    draw_text(draw, (left + agentr_w + 1, 112), "_", hanken, ORANGE)
-
-    meta = "agentr.dev"
-    meta_w = draw.textlength(meta, font=mono) + 2.4 * (len(meta) - 1)
-    draw_text(draw, (W - 64 - meta_w, 84), meta, mono, GOLD, tracking=2.4)
-
-    draw_text(draw, (64, 232), "Awesome RSI", serif, CREAM, tracking=-3.4)
+    draw_text(draw, (64, 148), "Awesome RSI", serif, CREAM, tracking=-3.4)
     draw_text(
         draw,
-        (68, 340),
+        (68, 256),
         "Self-learning begins when experience becomes more than memory.",
         italic,
         GOLD,
     )
-    draw_text(
-        draw,
-        (64, 418),
-        "act  ->  observe  ->  test  ->  revise  ->  transfer",
-        loop,
-        MUTED,
-        tracking=1.2,
-    )
-    draw.rectangle((64, 468, 318, 470), fill=ORANGE)
+    draw.rectangle((64, 308, 318, 310), fill=ORANGE)
+
+    mark = Image.open(ASSETS / "agentr-mark.png").convert("RGBA")
+    mark.thumbnail((44, 44), Image.Resampling.LANCZOS)
+
+    credit = "Curated by "
+    brand = "agentr"
+    credit_w = draw.textlength(credit, font=mono) + 1.8 * (len(credit) - 1)
+    brand_w = sum(draw.textlength(c, font=credit_sans) - 1.4 for c in brand) + 1.4
+    us_w = draw.textlength("_", font=credit_sans)
+    gap = 12
+    total_w = credit_w + mark.width + gap + brand_w + us_w
+    cx = W - 64 - total_w
+    cy = H - 88
+    draw_text(draw, (cx, cy + 5), credit, mono, ACID, tracking=1.8)
+    mark_y = int(cy + (credit_size - mark.height) / 2)
+    img.paste(mark, (int(cx + credit_w), mark_y), mark)
+    bx = cx + credit_w + mark.width + gap
+    draw_text(draw, (bx, cy), brand, credit_sans, CREAM, tracking=-1.2)
+    draw_text(draw, (bx + brand_w + 1, cy), "_", credit_sans, ORANGE)
 
     rgb = img.convert("RGB")
     png = ASSETS / "banner.png"

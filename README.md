@@ -1,89 +1,25 @@
-<div align="center">
-
-<a href="https://agentr.dev">
-  <img src="assets/banner.jpg" alt="AgentR Awesome RSI — a research initiative" width="100%">
-</a>
-
-[![AgentR](https://img.shields.io/badge/agentr-research-e75b31?style=flat-square&labelColor=090b0a)](https://agentr.dev)
-[![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
-[![Notes](https://img.shields.io/badge/notes-d5df72?style=flat-square&labelColor=090b0a)](https://agentr.dev/blog)
-[![GitHub](https://img.shields.io/badge/github-agentrhq-f3eedf?style=flat-square&labelColor=090b0a)](https://github.com/agentrhq)
-
-</div>
+![AgentR Awesome RSI — a research initiative](assets/banner.png)  
+![Awesome](https://awesome.re/badge-flat.svg)  
 
 # Awesome RSI
 
 An [AgentR](https://agentr.dev) research index of recursive self-improvement.
 
-We study how autonomous systems turn interaction into self-learning: forming working hypotheses, testing them through action, and carrying forward what the evidence can support. This list maps the papers, systems, and measurements of that loop — **act → observe → test → revise → transfer**.
+We study how autonomous systems turn interaction into self-learning: forming working hypotheses, testing them through action, and carrying forward what the evidence can support.
 
 > [!IMPORTANT]
 > **RSI is stronger than ordinary iteration.** This list distinguishes systems that improve a persistent part of themselves from systems that merely revise one answer. A recursive system must also improve, or repeatedly reuse, the mechanism that produces later improvements. Most current systems are bounded or partial RSI — not open-ended intelligence explosions.
 
-## Start Here
 
-| Reading path | What to look for |
-| --- | --- |
-| [Self-modifying agents](#papers--harness) | Does the revised agent participate in its next improvement? |
-| [Iterative self-training](#papers--models) | Do updated models generate the next training data, curriculum or rewards? |
-| [Experience, memory and skills](#papers--experience) | Does retained state change later tasks, or only the current attempt? |
-| [Theory and evaluation](#papers--theory-and-evaluation) | Which assumptions and measurements support the loop? |
-| [Benchmarks](#benchmarks) | Is improvement measured across generations, not a single task score? |
-
-**Reading the evidence:** each entry is Organization — Title, then date and source type, research focus, a short summary, why it matters, and whether results are author-reported or independently validated. No entry establishes unbounded autonomous RSI.
 
 ## Contents
 
 - [Category Overview](#category-overview)
-- [Company Research Blogs](#company-research-blogs)
-  - [Mechanisms and Results](#mechanisms-and-results)
-  - [AI Research and Supporting Methods](#ai-research-and-supporting-methods)
-  - [Evaluation and Failure Modes](#evaluation-and-failure-modes)
-  - [Research Agendas](#research-agendas)
-  - [Foundations and Historical Tutorials](#foundations-and-historical-tutorials)
-  - [Engineering Reports](#engineering-reports)
 - [Papers and Official Code](#papers-and-official-code)
-  - [Papers / Harness](#papers--harness)
-  - [Papers / Models](#papers--models)
-  - [Papers / Experience](#papers--experience)
-  - [Papers / Theory and Evaluation](#papers--theory-and-evaluation)
-  - [Surveys and Taxonomies](#surveys-and-taxonomies)
-  - [Foundations](#foundations)
-- [Benchmarks](#benchmarks)
-- [Safety, Limits, and Governance](#safety-limits-and-governance)
-- [Active GitHub Projects](#active-github-projects)
-  - [GitHub / Models](#github--models)
-  - [GitHub / Harness](#github--harness)
-  - [GitHub / Artifacts](#github--artifacts)
-- [Workshops and Related Collections](#workshops-and-related-collections)
-- [Scope and Curation](#scope-and-curation)
 - [AgentR](#agentr)
 - [Contributing](#contributing)
 
-## Category Overview
 
-| Category | Resource | Entries |
-| --- | --- | ---: |
-| [Mechanisms and Results](#mechanisms-and-results) | Blog | 6 |
-| [AI Research and Supporting Methods](#ai-research-and-supporting-methods) | Blog | 15 |
-| [Evaluation and Failure Modes](#evaluation-and-failure-modes) | Blog | 4 |
-| [Research Agendas](#research-agendas) | Blog | 2 |
-| [Foundations and Historical Tutorials](#foundations-and-historical-tutorials) | Blog | 4 |
-| [Engineering Reports](#engineering-reports) | Blog | 4 |
-| [Papers / Harness](#papers--harness) | Paper | 34 |
-| [Papers / Models](#papers--models) | Paper | 31 |
-| [Papers / Experience](#papers--experience) | Paper | 41 |
-| [Papers / Theory and Evaluation](#papers--theory-and-evaluation) | Paper | 10 |
-| [Surveys and Taxonomies](#surveys-and-taxonomies) | Paper | 14 |
-| [Foundations](#foundations) | Paper | 12 |
-| [Benchmarks](#benchmarks) | Paper / project | 40 |
-| [Safety, Limits, and Governance](#safety-limits-and-governance) | Paper | 8 |
-| [GitHub / Models](#github--models) | GitHub project | 2 |
-| [GitHub / Harness](#github--harness) | GitHub project | 4 |
-| [GitHub / Artifacts](#github--artifacts) | GitHub project | 5 |
-| **Total** |  | **236** |
-
-Counts refer to resources, not independent breakthroughs: a blog, paper and repository may describe the same work.
 
 ## Company Research Blogs
 
@@ -279,6 +215,8 @@ Focus: Bounded optimization · Hypothesis evolution · Tournament ranking
 
 > Generation, reflection, ranking, evolution, and meta-review agents revise scientific hypotheses using tournament feedback.
 
+
+
 Why it matters: Applies iterative selection to scientific hypotheses rather than code.  
 Evidence: Company-reported results; Elo is a self-evaluation signal. Independent replication not established.
 
@@ -420,6 +358,8 @@ Evidence: Benchmark authors’ protocol paper; not a self-improving agent.
 
 - Dates refer to first public version (usually first arXiv posting). A date alone makes no peer-review claim; venues are shown only when source-verified.
 - Code links are author-linked releases. If an entry has no code link, no author-linked implementation was established here; that does not assert that none exists.
+
+
 
 ### Papers / Harness
 
@@ -683,6 +623,8 @@ Focus: Self-modification · Archive search
 
 > A coding agent modifies its own implementation, evaluates descendants on coding benchmarks, and branches from a growing archive of agents to produce further improvements.
 
+
+
 Why it matters: Introduces an explicit self-modification mechanism via archive search.  
 Evidence: Author-reported results with official code; independent replication not established. [Code](https://github.com/jennyzzt/dgm). Empirical code-level self-improvement, not formal proof of beneficial rewrites or foundation-model weight training; benchmark exploitation and sandbox escape remain concerns.
 
@@ -876,6 +818,8 @@ Focus: Self-training · Reward learning · Co-evolution
 
 > A model co-evolves its task proposals and solving ability, using a code executor for task validity and answer rewards instead of an externally curated post-training dataset.
 
+
+
 Why it matters: Zero data refers to the self-play post-training setup, not an untrained backbone; the executor, rewards and optimization machinery are human-designed.  
 Evidence: Author-reported results with official code; independent replication not established. [Code](https://github.com/LeapLabTHU/Absolute-Zero-Reasoner).
 
@@ -924,7 +868,7 @@ Focus: Self-training · Learned judge · Evaluator
 Why it matters: The meta-judge loop is a designed training recipe with a small number of reported iterations.  
 Evidence: Author-reported results; independent replication not established.
 
-**[THUDM — ReST-MCTS*](https://arxiv.org/abs/2406.03816)**  
+**[THUDM — ReST-MCTS](https://arxiv.org/abs/2406.03816)***  
 June 6, 2024 · Preprint  
 Focus: Self-training · Reward learning
 
@@ -1159,6 +1103,8 @@ Focus: Bounded optimization · Prompt revision · Evaluator
 
 > Reflects on execution traces and evaluator feedback to propose prompt revisions, retaining complementary candidates through Pareto-based selection.
 
+
+
 Why it matters: Provides a bounded optimization result via prompt revision.  
 Evidence: Author-reported results with official code; independent replication not established. [Code](https://github.com/gepa-ai/gepa). The original method optimizes prompts with fixed model weights; a general optimize-anything API is not evidence that GEPA rewrites itself.
 
@@ -1376,6 +1322,8 @@ March 2023 · Preprint
 Focus: Bounded optimization · Verbal feedback
 
 > Stores verbal self-reflection from a failed attempt and conditions the next attempt on that memory.
+
+
 
 Why it matters: Adjacent within-task memory; persistent RSI only if later systems reuse that state across tasks.  
 Evidence: Author-reported results; independent replication not established.
@@ -1895,6 +1843,8 @@ Focus: Offline · Harness · Context
 
 > A harness in which agents optimize other agents under executable evaluation.
 
+
+
 Why it matters: Treats agent-optimization-of-agents as the benchmark object.  
 Evidence: Evaluation protocol; does not itself demonstrate recursive self-improvement.
 
@@ -2292,18 +2242,22 @@ Evidence: Public implementation; repository activity is not independent scientif
 - [Awesome Harness Evolution](https://github.com/wannabeyourfriend/awesome-harness-evolution)
 - [Awesome Longitudinal AI Agents](https://github.com/KevinCL16/awesome-longitudinal-ai-agents)
 
+
+
 ## Scope and Curation
 
 RSI means an improved system participates in producing subsequent improvements. This list prioritizes implementations that change their own improvement machinery; related self-training and persistent artifact optimization are labeled separately.
 
-| System behavior | Included? | Typical label |
-| --- | --- | --- |
-| Revises only the current answer, with no reusable state | Usually no | Output refinement |
-| Generates, filters, or repairs data and trains a later model | Yes | **Self-training** |
-| Stores experience that changes later behavior | Yes | **Experience learning** |
-| Updates prompts, memory, tools, skills, or executable control logic | Yes | **Self-modification** or **Experience learning** |
-| Improves the updater, evaluator, mutation policy, or harness engineer used in later rounds | Yes | **Self-modification** (RSI candidate) |
-| Optimizes an external artifact while the agent remains fixed | Yes, labeled | **Bounded optimization** |
+
+| System behavior                                                                            | Included?    | Typical label                                    |
+| ------------------------------------------------------------------------------------------ | ------------ | ------------------------------------------------ |
+| Revises only the current answer, with no reusable state                                    | Usually no   | Output refinement                                |
+| Generates, filters, or repairs data and trains a later model                               | Yes          | **Self-training**                                |
+| Stores experience that changes later behavior                                              | Yes          | **Experience learning**                          |
+| Updates prompts, memory, tools, skills, or executable control logic                        | Yes          | **Self-modification** or **Experience learning** |
+| Improves the updater, evaluator, mutation policy, or harness engineer used in later rounds | Yes          | **Self-modification** (RSI candidate)            |
+| Optimizes an external artifact while the agent remains fixed                               | Yes, labeled | **Bounded optimization**                         |
+
 
 The unit of analysis is the **deployed agent system**, not only its neural weights. Changing a surface is not automatically recursive improvement. A normal tool-use loop, test runner, RAG framework, or manually maintained skill collection does not qualify.
 

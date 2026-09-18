@@ -1,4 +1,4 @@
-![AgentR Awesome RSI — a research initiative](assets/banner.png)  
+![AgentR Awesome RSI — a research initiative](assets/banner.jpg)  
 ![Awesome](https://awesome.re/badge-flat.svg)  
 
 # Awesome RSI

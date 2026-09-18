@@ -1,21 +1,11 @@
-"""Render researcher-maintained README entries."""
+"""Helpers for compact README paper entries."""
 
 
-def entry(org, title, url, date, source, focus, quote, why, evidence):
+def paper(title, url, org, date, source, tags, abstract):
+    tag_line = " ".join(f"`{t}`" for t in tags)
     return (
-        f"**[{org} — {title}]({url})**  \n"
-        f"{date} · {source}  \n"
-        f"Focus: {focus}\n\n"
-        f"> {quote}\n\n"
-        f"Why it matters: {why}  \n"
-        f"Evidence: {evidence}\n"
+        f"### [{title}]({url}) — {org}\n"
+        f"*{date} · {source}*\n\n"
+        f"tags: {tag_line}\n\n"
+        f"> **Abstract:** {abstract}\n"
     )
-
-
-AUTH = "Author-reported results; independent replication not established."
-AUTH_CODE = "Author-reported results with official code; independent replication not established."
-CO = "Company-reported results; independent replication not established."
-PROTO = "Evaluation protocol; does not itself demonstrate recursive self-improvement."
-THEORY = "Formal or position argument; not an empirical demonstration of RSI."
-SURVEY = "Secondary synthesis; not a primary experimental result."
-IMPL = "Public implementation; repository activity is not independent scientific validation."
